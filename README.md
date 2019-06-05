@@ -6,3 +6,5 @@ Note: this is a very simple tool, and made for my needs, the final file might ne
 
 
 ... Because is very useful for me I hope be improving it very soon.
+
+You can try this tool [here](telegram-finances-tool.netlify.com).
