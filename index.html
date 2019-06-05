@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Telegram Finances Tool</title>
+</head>
+
+<body>
+<h2>Telegram Finances Tool</h2>
+<p>
+    This is a simple parser to telegram messages of the form:<strong>AMOUNT CURRENCY - DESCRIPTION</strong>.
+    And outputs a .csv file with columns for the amouny, currency, date, description and category.
+</p>
+<p>Note: this is a very simple tool, and made for my needs, the final file might need your hand.</p>
+<br>
+<p>Paste here the Telegram messages:</p>
+<textarea cols="30" id="notes" name="notes" rows="20"></textarea>
+<p>Title for the exported file (optional):</p>
+<input id="title" type="text">
+
+<script src="index.js"></script>
+<script src="jsontocsv.js"></script>
+</body>
+
+</html>
