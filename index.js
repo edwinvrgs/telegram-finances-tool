@@ -26,7 +26,7 @@ ready(() => {
       category: 'CATEGORÍA',
     }
 
-    const title = document.getElementById('title').target.value
+    const title = document.getElementById('title').value
 
     exportCSVFile(headers, data, title || 'finances-from-telegram')
   })
