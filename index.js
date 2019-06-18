@@ -39,8 +39,12 @@ function getData (text) {
   // Take only the messages with the suggested format
   const linesWithInfoOfInterest = lines.map(line => line.split('\n')).
                                         filter(line => line.length === 2).
-                                        filter((line, index) => Number(
-                                          line[1].split(' ')[0]))
+                                        filter((line) => {
+                                          const [amount, currency] = line[1].split(
+                                            ' ')
+                                          console.log({amount, currency})
+                                          return Number(amount) && currency
+                                        })
 
   // Create the final object
   const linesWithoutUnNecessaryInfo = linesWithInfoOfInterest.map(line => {
@@ -52,6 +56,7 @@ function getData (text) {
 
     let secondElement = line[1].split(' - ').map(el => el.trim())
 
+    console.log({secondElement})
     let [amount, currency] = secondElement[0].split(' ')
     currency = currency.toLowerCase()
 
